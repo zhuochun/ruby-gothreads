@@ -1,4 +1,6 @@
 class RubyGo::Timeout
+  attr_reader :timeout_at
+
   def initialize(seconds)
     @mutex = Mutex.new
     @timeout = false
@@ -10,7 +12,7 @@ class RubyGo::Timeout
 
     @mutex.synchronize do
       diff = @timeout_at - Time.now()
-      @timeout = true if diff <= 0.001
+      @timeout = true if diff <= 0
     end
 
     if @timeout

@@ -21,6 +21,8 @@ module RubyGo
 
     selected = false
     loop do
+      sleep 0.01 # to prevent busy loop
+
       chans.each do |c, cm|
         begin
           value = c.pop(true)
