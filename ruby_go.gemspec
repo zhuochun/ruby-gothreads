@@ -4,13 +4,13 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'ruby_go/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "ruby_go"
+  spec.name          = "ruby_gothreads"
   spec.version       = RubyGo::VERSION
   spec.authors       = ["Zhuochun"]
   spec.email         = ["zhuochun@hotmail.com"]
 
-  spec.summary       = %q{Syntax sugars around Ruby threads like Goroutines}
-  spec.description   = %q{Syntax sugars (`go`, `chan`, `select`) around Ruby threads and queues, emulating Golang Goroutines}
+  spec.summary       = %q{Syntax sugars around Ruby threads, emulating Goroutines}
+  spec.description   = %q{Syntax sugars (go, chan and select) around Ruby threads, emulating Golang Goroutines}
   spec.homepage      = "https://github.com/zhuochun"
   spec.license       = "MIT"
 
